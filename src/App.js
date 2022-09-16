@@ -8,18 +8,15 @@ import SearchPublished from "./components/SearchPublished";
 
 function App() {
 
-  let getSearchData=(data)=>{
-      console.log(`child to data ${data}`);
-      console.log(data)
-  }
+
   return (
     <div className="App">
       <Router>
-      <SearchPublished onSubmit={getSearchData}/>
       <Navbar />
       <Routes>
         <Route index path="newpost" element={<NewPost />} />
         <Route path="published" element={<Published />} />
+        <Route path="search:searchVal" element={<SearchPublished/>}/>
       </Routes>
     </Router>
     </div>

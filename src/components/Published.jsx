@@ -10,8 +10,8 @@ function Published() {
       {
         temp &&temp.map(({id,post,details})=>{
             return(
-              <div key={id} >
-                <h1>{post}</h1>
+              <div key={id} className="Publish-content">
+                <h1 style={{color:"#e63946"}}>{post}</h1>
                 <p>{details}</p>
               </div>
             )
